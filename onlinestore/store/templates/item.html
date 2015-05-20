@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+	<div class="page-header">
+  		<h1>{{ content.item_text }}</h1>
+	</div>
+
+<div class="container">
+    <div class="row">
+    	 <div class="col-md-6">
+    	 	 <div class="well">
+                    <img src="{{ STATIC_URL }}/static/{{ content.thumbnail }}" alt="Douglas & Sons product: {{ content.item_text }}" height="400" width="300"/>
+             </div>
+    	 </div>
+        <div class="col-md-6">
+            <div class="well well-lg">
+                <p>{{ content.item_description }}</p>
+
+                <h2>R {{ content.price }}</h2>
+            	<button type="button" class="btn btn-primary">Purchase</button> 
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

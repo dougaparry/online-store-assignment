@@ -1,0 +1,69 @@
+<!-- This base HTML page is the template from which all o the remaining templates inherit
+      It contains all of the head components as well as the navigation bar and footer components -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>	
+		<title>Douglas & sons</title> 
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link Bootstrap stylesheet (minified) via the static URL-->
+    <link href="{{ STATIC_URL }}/static/bootstrap/bootstrap-3.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Custom Styles for the footer -->
+    <link href="{{ STATIC_URL }}/static/sticky-footer.css" rel="stylesheet">
+
+    <!-- Additional CSS styles overriding bootstrap -->
+    <link href="{{ STATIC_URL }}/static/style_overrides.css" rel="stylesheet">
+		
+	</head>
+
+	<body>
+
+	<!-- Static navbar -->
+   		<nav class="navbar navbar-default navbar-static-top">
+      		<div class="container">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        				<span class="sr-only">Toggle navigation</span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+           				<span class="icon-bar"></span>
+        		  </button>
+          		  <a class="navbar-brand" href="/">Douglas & sons</a>
+        		</div>
+        
+        		<div id="navbar" class="navbar-collapse collapse">
+          			<ul class="nav navbar-nav">
+               			 <li><a href="/categories">Categories</a></li>
+               			 <li><a href="/about">About</a></li>
+              			 <li><a href="/contact">contact</a></li>
+          			</ul>
+        		</div><!--/.nav-collapse -->
+      		</div> <!-- container -->
+    	</nav>
+
+      <!-- All of the templates which inherit from this base extend it from this location -->
+
+		{% block content %}
+
+		{% endblock %}
+
+	 	<hr>
+
+    	<footer class="footer">
+     		 <div class="container">
+       			 <p class="text-muted">Copyright &copy; 2015 Douglas & sons</p>
+      		</div>
+    	</footer>
+
+        <!-- Bootstrap core JavaScript
+   	
+   		<!-- Placed at the end of the document so the pages load faster -->
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   			<script src="{{ STATIC_URL }}/static/bootstrap/bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>	
+	</body> 
+
+</html>

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+	<div class="page-header">
+  		<h1>{{ categoryForTemplate.category_text }}</h1>
+	</div>
+
+	<div class="container">
+			<p>{{ categoryForTemplate.category_description }}</p>
+
+		<div class="row">
+
+			{% for item in items%}
+				<div class="col-sm-4 col-lg-4 col-md-4">
+                	 <div class="thumbnail">
+                	 	<a href="/{{ item.id }}"><img src="{{ STATIC_URL }}/static/{{ item.thumbnail }}" 
+                         alt="Douglas & Sons product: {{ item.item_text }}" height="150" width="150"/></a>
+                         <div class="caption">
+                            <h4 class="pull-right">R {{ item.price }}</h4>
+                            <h4><a href="/{{ item.id }}">{{ item.item_text }}</a></h4>
+                            <p>{{ item.item_description }}</p>
+                        </div>
+                	</div>
+             	</div>
+			{% endfor %}
+
+		</div><!-- row -->
+	</div> <!-- container -->
+
+
+</div>
+
+{% endblock %}
