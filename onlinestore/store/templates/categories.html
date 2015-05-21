@@ -16,7 +16,7 @@
 	 	 <div class="col-sm-4 col-lg-4 col-md-4">
              <div class="thumbnail">
                     <div class="caption">
-                        <h4><a href="/categories/{{ item.category_text }}"> {{ item.category_text }}</a></h4>
+                        <h4><a id="category_link" href="/categories/{{ item.category_text }}"> {{ item.category_text }}</a></h4>
                         <p>{{ item.category_description }}</p>
                     </div>
             </div>
@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="well">
-                    <img class="thumbnail img-responsive" alt="Douglas & Sons about" src="{{ STATIC_URL }}/static/categories1.jpg" />
+                    <img class="thumbnail img-responsive categories_images" alt="Douglas & Sons about" src="{{ STATIC_URL }}/static/categories1.jpg" />
                 </div>
             </div>
             <div class="col-md-6">

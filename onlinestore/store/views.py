@@ -1,3 +1,4 @@
+# Author: DA PARRY (16700090) - 2015
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
 from store.models import Category, Item
