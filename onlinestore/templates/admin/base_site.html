@@ -1,7 +1,7 @@
 {% extends "admin/base.html" %}
 
 {% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
-
+<!-- The code to follows overrides Django's stahdard admin site page to be tailored to the current page -->
 {% block branding %}
 <h1 id="site-name"><a href="{% url 'admin:index' %}">Douglas & sons: Administration</a></h1>
 {% endblock %}

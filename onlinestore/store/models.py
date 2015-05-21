@@ -1,8 +1,12 @@
+# Author: DA Parry 16700090
+
 import datetime 
 from django.db import models 
 from django.utils import timezone
 from django.core.files import File
 from django.db.models import Count
+
+#This class contains the model declaration for the category model
 
 class Category(models.Model): 
 	category_text = models.CharField(max_length=200) 
@@ -14,6 +18,8 @@ class Category(models.Model):
 
 	def get_category_name(self):
 		return self.category_text
+
+#This class contains the model declaration for the item model		
 
 class Item(models.Model): 
 	category = models.ForeignKey(Category) 

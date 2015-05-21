@@ -2,10 +2,11 @@
 
 {% block content %}
 
-    <!-- Carousel
-    ================================================== -->
+<!--  Home.html template -->
+<!-- Author: DA PARRY (16700090) - 2015 -->
+
+    <!-- Carousel of promotional material-->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -55,6 +56,11 @@
 
     <div class="container">
     	 <div class="row">
+
+    	 <!-- This code loops through the list passed to the template stored in content
+    	 		For each item in content it will display a 'card' on the page
+    	 		This card is populated with the information recieved from the model/database and 
+    	 		referenced by calling the appropriate fields and attributes from each object -->
 
     		{% for item in content %}
 

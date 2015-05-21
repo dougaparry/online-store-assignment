@@ -2,6 +2,9 @@
 
 {% block content %}
 
+<!-- Author: DA PARY  -->
+<!-- This html template extends the base html, listing all of the categories available -->
+
 <div class="container">
 	<div class="page-header">
   		<h1 id="page header">Product Categories</h1>
@@ -10,6 +13,10 @@
 
 <div class="container">
 	<div class="row">
+
+	<!-- This code loops through the list of objects passed to the template
+			creating a 'card' for each category, populated with its correct infromation
+				from the object -->
 
 	 {% for item in content %}
 
